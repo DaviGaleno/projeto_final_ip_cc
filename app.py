@@ -45,7 +45,62 @@ def criar_termo():
 
     return redirect(url_for('glossario'))
 
+@app.route('/deletar_termo/<termo>')
+def deletar_termo(termo):
+    novos_termos = []
+
+    with open('bd_glossario.csv', newline='', encoding='utf-8') as csvfile:
+        reader = csv.reader(csvfile, delimiter=';')
+        for t in reader:
+            if t[0] != termo:
+                novos_termos.append(t)
+
+    with open('bd_glossario.csv', 'w', newline='', encoding='utf-8') as csvfile:
+        writer = csv.writer(csvfile, delimiter=';')
+        writer.writerows(novos_termos)
+
+    return redirect(url_for('glossario'))
+
+@app.route('/editar_termo/<termo>')
+def editar_termo(termo):
+    termo_encontrado = None
+
+    with open('bd_glossario.csv', newline='', encoding='utf-8') as csvfile:
+        reader = csv.reader(csvfile, delimiter=';')
+        for t in reader:
+            if t[0] == termo:
+                termo_encontrado = t
+                break
+
+    if termo_encontrado:
+        return render_template('editar_termo.html', termo=termo_encontrado)
+    else:
+        return redirect(url_for('glossario'))
+
+
+@app.route('/salvar_edicao', methods=['POST'])
+def salvar_edicao():
+    termo_original = request.form['termo_original']
+    novo_termo = request.form['termo']
+    nova_definicao = request.form['definicao']
+
+    termos_atualizados = []
+
+    with open('bd_glossario.csv', newline='', encoding='utf-8') as csvfile:
+        reader = csv.reader(csvfile, delimiter=';')
+        for t in reader:
+            if t[0] == termo_original:
+                termos_atualizados.append([novo_termo, nova_definicao])
+            else:
+                termos_atualizados.append(t)
+
+    with open('bd_glossario.csv', 'w', newline='', encoding='utf-8') as csvfile:
+        writer = csv.writer(csvfile, delimiter=';')
+        writer.writerows(termos_atualizados)
+
+    return redirect(url_for('glossario'))
 
 app.run(debug=True)
+
 
 

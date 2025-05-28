@@ -1,7 +1,94 @@
 {% extends  "modelo.html" %}
 
 {% block conteudo %}
-    <h1>Teste de extensão do modelo</h1>
-    <a href="/sobre-equipe">Sobre a equipe</a>
+
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aprenda Python</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Barra de navegação -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Python</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="#grupo">Grupo</a></li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Pesquisar">
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- Carrossel -->
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="C:\Users\DaviGaleno\PycharmProjects\projeto_final_ip_cc\templates\pythonImg1.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="C:\Users\DaviGaleno\PycharmProjects\projeto_final_ip_cc\templates\pythonImg2..jfif" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="C:\Users\DaviGaleno\PycharmProjects\projeto_final_ip_cc\templates\ConfigureDebugger.gif" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+<!-- mini blog -->
+
+
+
+
+<!-- Grupo -->
+<div class="container text-center mt-5" id="grupo">
+  <div class="row">
+    <div class="col">
+      <img src="https://via.placeholder.com/140" class="rounded-circle" alt="Imagem">
+      <h2>O que é Python?</h2>
+      <p>Python é uma linguagem de programação versátil, fácil de aprender e muito utilizada em desenvolvimento web, automação, ciência de dados, inteligência artificial e muito mais.</p>
+    </div>
+    <div class="col">
+      <img src="https://via.placeholder.com/140" class="rounded-circle" alt="Imagem">
+      <h2>Por que aprender?</h2>
+      <p>Com Python, você pode criar desde sites até sistemas inteligentes. A sintaxe simples permite que até iniciantes desenvolvam projetos incríveis rapidamente.</p>
+    </div>
+    <div class="col">
+      <img src="https://via.placeholder.com/140" class="rounded-circle" alt="Imagem">
+      <h2>Comece agora</h2>
+      <p>Explore nossos tutoriais, aprenda lógica de programação, crie seus primeiros códigos e transforme ideias em realidade com Python.</p>
+    </div>
+    <div class="col">
+        <img src="https://via.placeholder.com/140" class="rounded-circle" alt="Imagem">
+        <h2>Comece agora</h2>
+        <p>Explore nossos tutoriais, aprenda lógica de programação, crie seus primeiros códigos e transforme ideias em realidade com Python.</p>
+      </div>
+  </div>
+</div>
+
+<!-- Scripts Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 
 {% endblock %}

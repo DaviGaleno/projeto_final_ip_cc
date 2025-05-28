@@ -17,7 +17,12 @@
       <th scope="row">{{ loop.index }}</th>
       <td>{{ termo[0] }}</td>
       <td>{{ termo[1] }}</td>
-      <td>Apagar</td>
+      <td>
+  <a href="{{ url_for('editar_termo', termo=termo[0]) }}" class="btn btn-warning btn-sm">Editar</a>
+      </td>
+      <td>
+  <a href="{{ url_for('deletar_termo', termo=termo[0]) }}" class="btn btn-danger btn-sm">Apagar</a>
+      </td>
     </tr>
   {% endfor %}
   </tbody>
