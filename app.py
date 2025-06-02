@@ -1,19 +1,43 @@
 import csv
-from flask import Flask, render_template, request, url_for, redirect
+from flask import Flask, render_template, jsonify, request, url_for, redirect
+from dotenv import load_dotenv
+import os
+import google.generativeai as genai
+
+load_dotenv()
+
+genai.configure(api_key="AIzaSyDeY_wq649r9jzboYnDda-_KwL18lV56Bk")
 
 app = Flask(__name__)
 
 @app.route('/')
-def ola():
-    # return '<h1>Olá, Mundo!</h1>'
+def index():
     return render_template('index.html')
+
+@app.route("/chat", methods=["POST"])
+def chat():
+    data = request.json
+    user_input = data.get("mensagem")
+
+    try:
+        model = genai.GenerativeModel("gemini-2.0-flash")
+        response = model.generate_content(["Você é um professor de python que tira duvidas sobre assuntos de python, dando respostas curtas e diretas.",
+        user_input
+        ])
+        resposta_bot = response.text
+        print(response.text)
+        resposta_bot = response.text
+    except Exception as e:
+        resposta_bot = f"[Erro]: {str(e)}"
+
+    return jsonify({"resposta": resposta_bot})
 
 @app.route('/sobre-equipe')
 def sobre_equipe():
     return render_template('sobre.html')
 
 
-@app.route('/glossario')
+@app.route('/dicionario')
 def glossario():
 
     glossario_de_termos = []

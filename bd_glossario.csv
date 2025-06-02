@@ -1,5 +1,30 @@
-Python;Python é uma linguagem de programação de alto nível, de propósito geral e de código aberto. Foi criada por Guido van Rossum e seu desenvolvimento começou em 1989, com a primeira versão lançada em 1991. Python é conhecida por sua sintaxe clara, legibilidade de código e versatilidade.
-Flask;Flask é um framework web leve e flexível para Python. Ele foi criado por Armin Ronacher e lançado pela primeira vez em 2010. Flask é conhecido por sua simplicidade e facilidade de uso, proporcionando as ferramentas necessárias para construir aplicativos web de forma rápida e eficiente.
-CSV;CSV (Comma-Separated Values) é um formato de arquivo simples usado para armazenar dados tabulares (como uma planilha ou banco de dados) em um formato de texto simples, onde cada linha do arquivo representa uma linha da tabela e os valores são separados por vírgulas ou outros delimitadores.Windows;SO de janelas
-Windows;SO de janelas
-Linux;SO do Pinguin
+Variável;Espaço nomeado usado para armazenar valores.
+Função;Bloco de código reutilizável que executa uma tarefa específica.
+Classe;Modelo para criar objetos com atributos e métodos.
+Objeto;Instância de uma classe.
+Lista;Coleção ordenada e mutável de elementos.
+Tupla;Coleção ordenada e imutável de elementos.
+Dicionário;Coleção de pares chave-valor.
+Condicional;Estrutura que executa código com base em uma condição (if/else).
+Laço for;Estrutura de repetição que itera sobre uma sequência.
+Laço while;Estrutura de repetição que executa enquanto a condição for verdadeira.
+Break;Interrompe um laço de repetição.
+Continue;Pula para a próxima iteração do laço.
+Return;Retorna um valor de uma função.
+Import;Carrega módulos externos ou internos.
+Módulo;Arquivo Python com definições e códigos reutilizáveis.
+Pacote;Coleção de módulos organizados em pastas.
+Lambda;Função anônima de uma linha.
+Decorador;Função que modifica outra função.
+Try;Bloco que tenta executar um código que pode gerar erro.
+Except;Bloco que lida com exceções (erros).
+Raise;Gera uma exceção manualmente.
+With;Gerencia recursos como arquivos de forma segura.
+None;Representa ausência de valor.
+Bool;Tipo de dado que representa verdadeiro ou falso.
+Int;Tipo de dado para números inteiros.
+Float;Tipo de dado para números decimais.
+Str;Tipo de dado para cadeias de texto.
+Input;Função que lê dados do usuário.
+Print;Função que exibe valores na tela.
+List Comprehension;Sintaxe concisa para criar listas.

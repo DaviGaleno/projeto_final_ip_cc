@@ -1,6 +1,7 @@
 {% extends "modelo.html" %}
 {% block conteudo %}
-<h1>Glossário</h1>
+<h1>Dicionário de termos</h1>
+<a href="{{ url_for('novo_termo') }}" class="btn btn-sm btn-success">Adicionar</a>
 
 <table class="table table-striped table-responsive table-bordered">
   <thead class="thead-default">
