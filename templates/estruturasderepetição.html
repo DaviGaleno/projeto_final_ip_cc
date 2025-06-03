@@ -1,0 +1,51 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de Repetição</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light">
+
+<div class="container my-5">
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h1>Estruturas de Repetição em Python</h1>
+            <p class="lead"> <code>As estruturas de repetição</code>, também chamadas de loops, são usadas para executar um bloco de código 
+                várias vezes, de acordo com uma condição ou para percorrer elementos de uma sequência (como listas, strings, dicionários, etc.).</p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>frutas = ['maçã', 'banana', 'uva']
+            for fruta in frutas:
+            print(fruta)</code></pre>
+        </div>
+        <div class="col-md-5">
+            <img src="{{ url_for('static', filename='while1.png') }}" class="img-fluid rounded" alt="For Loop">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <p class="lead"> <p>Em Python, as estruturas de repetição são utilizadas para executar um bloco de código várias vezes. As principais estruturas de repetição em 
+                Python são <code>for e while</code>. O for é usado quando se sabe o número exato de repetições ou quando se precisa iterar sobre um iterável, como uma lista ou string. 
+                O while é usado quando a repetição depende de uma condição lógica, que deve ser verdadeira para o loop continuar. </p>
+            <br>
+                <p><strong>Sintaxe:</strong></p>
+                for <code>variável_de_controle in objeto_iterável:</code>
+                <br>
+                <code>variável_de_controle:</code> Recebe o valor de cada elemento do objeto iterável.
+                <code>objeto_iterável:</code> Pode ser uma lista, tupla, string, conjunto, etc.
+        </div>
+        <div class="col-md-5">
+             <img src="{{ url_for('static', filename='EstruturasdeRepetição.webp') }}" class="img-fluid rounded" alt="For Loop">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+  
+</body>
+
+{% endblock %}

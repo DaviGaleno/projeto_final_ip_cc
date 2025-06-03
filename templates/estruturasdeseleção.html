@@ -1,0 +1,147 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estruturas de Seleção - Python</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    pre {
+      background-color: #1e1e1e;
+      padding: 10px;
+      border-radius: 5px;
+      color: #e0e0e0;
+    }
+    .navbar {
+      background-color: #1e1e1e !important;
+    }
+    .btn-outline-success {
+      border-color: #e0e0e0;
+      color: #e0e0e0;
+    }
+    .btn-outline-success:hover {
+      background-color: #e0e0e0;
+      color: #121212;
+    }
+  </style>
+</head>
+
+<body>
+<div class="container mt-5" id="selecao">
+  <h1>Estruturas de Seleção em Python</h1>
+
+  <p>
+    As estruturas de seleção são fundamentais na programação, pois permitem que o código tome decisões com base em condições específicas.
+    Elas possibilitam alterar o fluxo de execução do programa, fazendo com que determinados blocos de código sejam
+    executados apenas se certas condições forem verdadeiras.
+  </p>
+
+  <h2>Quando usar estruturas de seleção?</h2>
+  <p>
+    Você deve utilizar estruturas de seleção sempre que houver a necessidade de que o programa se comporte de maneira diferente dependendo de determinadas situações, como:
+  </p>
+  <ul>
+    <li>Verificar se um usuário tem idade suficiente para acessar um serviço;</li>
+    <li>Checar se um número é positivo, negativo ou zero;</li>
+    <li>Determinar qual desconto aplicar com base no valor da compra;</li>
+    <li>Tomar decisões baseadas em entradas do usuário.</li>
+  </ul>
+
+  <h2>A estrutura <code>if</code></h2>
+  <p>
+    A estrutura <code>if</code> é utilizada para executar um bloco de código apenas se uma determinada condição for verdadeira.
+    Caso a condição seja falsa, o bloco não será executado.
+  </p>
+
+  <h3>Exemplo:</h3>
+  <pre><code>
+numero = int(input("Digite um número: "))
+
+if numero > 0:
+    print("O número é positivo.")
+  </code></pre>
+
+  <p>
+    Neste exemplo, a mensagem será exibida apenas se a variável <code>numero</code> for maior que zero.
+  </p>
+
+  <h2>A estrutura <code>else</code></h2>
+  <p>
+    A estrutura <code>else</code> complementa o <code>if</code>, permitindo que um bloco de código seja executado quando a 
+    condição do <code>if</code> for falsa.
+    Ou seja, quando o <code>if</code> não é satifeito, o <code>else</code> entra em ação.
+  </p>
+
+  <h3>Exemplo:</h3>
+  <pre><code>
+numero = int(input("Digite um número: "))
+
+if numero > 0:
+    print("O número é positivo.")
+else:
+    print("O número é zero ou negativo.")
+  </code></pre>
+
+  <p>
+    Aqui, se o número não for maior que zero, o programa executa automaticamente o bloco dentro do <code>else</code>.
+  </p>
+
+  <h2>A estrutura <code>elif</code></h2>
+  <p>
+    O <code>elif</code> (abreviação de "else if") é utilizado quando precisamos testar múltiplas condições.
+    Ele permite adicionar várias verificações, cada uma com seu próprio bloco de código.
+  </p>
+
+  <h3>Exemplo:</h3>
+  <pre><code>
+numero = int(input("Digite um número: "))
+
+if numero > 0:
+    print("O número é positivo.")
+elif numero == 0:
+    print("O número é zero.")
+else:
+    print("O número é negativo.")
+  </code></pre>
+
+  <p>
+    Neste exemplo, o programa verifica inicialmente se o número é maior que zero.
+    Se não for, ele verifica se é igual a zero.
+    Caso nenhuma das condições anteriores seja satisfeita, o <code>else</code> é executado.
+  </p>
+
+  <h2>Resumo das Estruturas:</h2>
+  <ul>
+    <li><strong>if</strong>: executa um bloco se a condição for verdadeira.</li>
+    <li><strong>elif</strong>: adiciona novas condições a serem verificadas caso a anterior seja falsa.</li>
+    <li><strong>else</strong>: executa um bloco se todas as condições anteriores forem falsas.</li>
+  </ul>
+
+  <h2>Exemplo completo:</h2>
+  <pre><code>
+nota = float(input("Digite a nota do aluno: "))
+
+if nota >= 7:
+    print("Aluno aprovado.")
+elif nota >= 5:
+    print("Aluno em recuperação.")
+else:
+    print("Aluno reprovado.")
+  </code></pre>
+
+  <p>
+    Neste exemplo, o programa avalia a nota do aluno e imprime a mensagem adequada dependendo da situação.
+  </p>
+
+  <h2>Considerações finais:</h2>
+  <p>
+    As estruturas de seleção são essenciais para criar programas mais dinâmicos e inteligentes.
+    Dominar o uso de <code>if</code>, <code>elif</code> e <code>else</code> é o primeiro passo para aprender a linguagem pyhton. E para aqueles que estao no seu primeiro contato
+    com o mundo de programação, aprender a logica de pyhton, é fundamental para o desenvolvimento da forma de pensar na resolução de problemas e criação de algoritmos.
+    Pratique sempre que possível, e boa sorte!
+  </p>
+</div>
+
+</body>
+
+{% endblock %}
+

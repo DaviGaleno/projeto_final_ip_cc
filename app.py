@@ -32,10 +32,18 @@ def chat():
 
     return jsonify({"resposta": resposta_bot})
 
-@app.route('/sobre-equipe')
-def sobre_equipe():
-    return render_template('sobre.html')
+@app.route('/vetoresematrizes')
+def vetoresematrizes():
+    return render_template('vetoresematrizes.html')
 
+@app.route('/estruturasdeseleção')
+def estruturasdeseleção():
+    return render_template('estruturasdeseleção.html')
+
+
+@app.route('/estruturasderepetição')
+def estruturasderepetição():
+    return render_template('estruturasderepetição.html')
 
 @app.route('/dicionario')
 def dicionario():
