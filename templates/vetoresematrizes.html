@@ -1,73 +1,135 @@
 {% extends "modelo.html" %}
 {% block conteudo %}
 
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vetores e Matrizes</title>
+  <style>
+    body {
+      font-family: 'Arial', 'sans-serif';
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #212529;
+      color: #ADB5BD;
+    }
+
+    header {
+      background-color: #212529;
+      color: #ADB5BD;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #ADB5BD;
+    }
+
+    h3 {
+      color: #ADB5BD;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      background-color: #212529;
+      border-radius: 10px;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    pre {
+      background-color: #131212;
+      padding: 1rem;
+      border-left: 4px solid #d63384;
+      overflow-x: auto;
+      border-radius: 5px;
+    }
+
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      color: #d63384;
+    }
+
+    strong {
+      color: #f7f3f3;
+    }
+
+    i {
+      color: #6c757d;
+    }
+  </style>
 </head>
 
 <body>
-  <h1> Vetores e Matrizes</h1>
-  <h3>Entenda de uma vez por todas o conceito e aplicação de <strong> Vetores e Matrizes</strong> com exemplos!</h3>
+  <header>
+    <h1>Vetores e Matrizes</h1>
+    <h3>Entenda de uma vez por todas o conceito e aplicação com exemplos práticos!</h3>
+  </header>
 
-  <h2> Vetores: Listas Unidimensional</h2>
+  <main>
+    <h2>Vetores: Lista Unidimensional</h2>
     <p>É uma sequência ordenada de elementos. Em Python, isso é representado por uma <strong>lista</strong> com uma única dimensão.</p>
-    <p><strong>Exemplos de Vetor (lista): </strong></p>
-        <pre><code>nomes = ["Ana", "Carlos", "João"]
-        print(nomes[0])  # Saída: Ana</code></pre>
+    <p><strong>Exemplo de vetor:</strong></p>
+    <pre><code>nomes = ["Ana", "Carlos", "João"]
+print(nomes[0])  # Saída: Ana</code></pre>
 
-    <p>No caso da linguagem Python o primeiro elemento de um vetor tem i=0, logo nomes=[0] representa “Ana” e nomes=[1] “Carlos” e assim sucessivamente.</p>
-    <p>Vamos verificar novamente no exemplo abaixo:</p>
-            
-            <pre><code>idade = ["11", "12", "13"]
-            print(idade[2])  # Saída: 13</code></pre>
+    <p>No Python, o primeiro elemento de um vetor tem índice 0. Então <code>nomes[0]</code> representa “Ana”, <code>nomes[1]</code> “Carlos” e assim por diante.</p>
 
-    <p>Nesse exemplo idade=[0] representaria "11", enquanto idade=[1] seria "12", e por último temos idade= [2] representando a idade "13".</p>
-    <p> Podemos adicionar um novo item ao vetor utilizando o <i>append</i>, veja:</p>
-<pre><code>idade = ["11", "12", "13"]
+    <p>Outro exemplo:</p>
+    <pre><code>idade = ["11", "12", "13"]
+print(idade[2])  # Saída: 13</code></pre>
+
+    <p><code>idade[0]</code> representa "11", <code>idade[1]</code> é "12" e <code>idade[2]</code> é "13".</p>
+
+    <p>Para adicionar um novo item usamos <i>append</i>:</p>
+    <pre><code>idade = ["11", "12", "13"]
 idade.append("14")
-print (idade)</code></pre>
+print(idade)</code></pre>
+    <p>A saída agora incluirá o elemento "14".</p>
 
-<p>A nova saída adicionará o elemnto "14" ao nosso vetor idade.</p>
+    <h2>Matrizes: Lista Bidimensional</h2>
+    <p>Uma matriz é uma estrutura com <strong>linhas e colunas</strong>. Em Python, é uma lista de listas.</p>
+    <p><strong>Exemplo:</strong></p>
+    <pre><code>matriz = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+]</code></pre>
 
-  <h2> Matrizes: Listas Bidimensional</h2>
-    <p>Uma Matriz é uma estrutura bidimensional composta por <strong>linhas e colunas</strong>. Em Python, representamos matriz como "listas de listas".</p>
-      <p><strong>Exemplo 1:</strong></p>
-
-       <pre><code> matriz = [
-        [1, 2, 3],
-        [4, 5, 6],
-        [7, 8, 9]
-        ]</code></pre>
-      
-    <p>Vamos acessar o elemento na segunda linha e terceira coluna, utilizando da sintaxe matriz[linha][coluna]</p>
-    
+    <p>Para acessar o elemento na 2ª linha e 3ª coluna:</p>
     <pre><code>print(matriz[1][2])  # Saída: 6</code></pre>
 
-    <p> Note-se que novamente, devemos levar em consideração que o índice tem ínicio no número 0, portanto matriz[1][2] refere-se à segunda linha e terceira coluna.</p>
+    <p>Como o índice começa em 0, <code>matriz[1][2]</code> corresponde à 2ª linha e 3ª coluna.</p>
 
-          <pre><code>print(matriz[0][0])  # 1 → primeira linha, primeira coluna
+    <pre><code>print(matriz[0][0])  # 1 → primeira linha, primeira coluna
 print(matriz[1][2])  # 6 → segunda linha, terceira coluna
 print(matriz[2][1])  # 8 → terceira linha, segunda coluna</code></pre>
 
-  <h2> Como utilizar Vetores e Matrizes na Prática!</h2>
-    <p> Já entendemos que os vetores são listas e que matrizes são listas de listas, mas vamos ver na prática como podemos utilizar essas dus definições?</p>
-    <p><strong>Exemplo:</strong></p>
+    <h2>Como utilizar Vetores e Matrizes na Prática</h2>
+    <p>Vetores são listas simples e matrizes são listas de listas. Vamos ver isso funcionando:</p>
     <pre><code>vetor1 = [1, 2, 3]
 vetor2 = [4, 5, 6]
 vetor3 = [7, 8, 9]</code></pre>
-    <p>Aqui vemos os nossos vetores, formados por listas simples. Mas, podemos transformar eles numa matriz da seguinte forma:</p>
-      <p><strong>Exemplo 2:</strong></p>
 
-      <pre><code> matriz = [
-        [1, 2, 3], # Vetor 1
-        [4, 5, 6], # Vetor 2
-        [7, 8, 9]  # Vetor 3
-        ]</code></pre>
-      
-      <p> Agora possuímos uma matriz com 3 linhas e 3 colunas!</p>
-      <p>Super fácil, certo?</p>
+    <p>Agora combinando esses vetores em uma matriz:</p>
+    <pre><code>matriz = [
+  [1, 2, 3], # Vetor 1
+  [4, 5, 6], # Vetor 2
+  [7, 8, 9]  # Vetor 3
+]</code></pre>
+
+    <p>Temos uma matriz 3x3! Super fácil, certo? 😄</p>
+  </main>
+</body>
+</html>
+
 
 
 

@@ -41,6 +41,14 @@ def estruturasdeseleção():
     return render_template('estruturasdeseleção.html')
 
 
+@app.route('/funcoeseprocedimentos')
+def funcoeseprocedimentos():
+    return render_template('funcoeseprocedimentos.html')
+
+@app.route('/tratamento')
+def tratamento():
+    return render_template('tratamento.html')
+
 @app.route('/estruturasderepetição')
 def estruturasderepetição():
     return render_template('estruturasderepetição.html')

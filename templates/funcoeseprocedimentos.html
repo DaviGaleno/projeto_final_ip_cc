@@ -1,0 +1,114 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funções e Procedimentos</title>
+  <style>
+  
+    body {
+      font-family: 'Arial', 'sans-serif';
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #212529;
+      color: #ADB5BD;
+    }
+
+    header {
+      background-color: #212529;
+      color: #ADB5BD;
+      padding: 10px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #ADB5BD;
+    }
+
+    h3 {
+      color: #ADB5BD;
+    }
+
+    main {
+      padding: 1rem;
+      max-width: 900px;
+      margin: auto;
+      background-color: #212529;
+      border-radius: 10px;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    pre {
+      background-color: #131212;
+      padding: 1rem;
+      border-left: 4px solid #d63384;
+      overflow-x: auto;
+      border-radius: 5px;
+    }
+
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      color: #8c949b;
+    }
+
+    strong {
+      color: #f7f3f3;
+    }
+
+    i {
+      color: #6c757d;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Funções e Procedimentos</h1>
+    <h3>Entenda de uma vez por todas o conceito e aplicação com exemplos práticos!</h3>
+  </header>
+  <main>
+    <h2>Definição</h2>
+    <p>Em Python, <strong>funções e procedimentos são mecanismos para organizar e reutilizar código</strong>.</p>
+    <p>As funções (functions) são capazes de <em>retornar valores</em>, enquanto os procedimentos (procedures) não.</p>
+    <p>Em Python, a palavra-chave <em>def</em> é usada para definir tanto funções quanto procedimentos. A diferença reside no retorno: <strong>função retorna um valor (usando a instrução return)</strong> , enquanto um procedimento não.</p>
+    
+    <h2>Funções</h2>
+    <p>São caracterizadas por retornar valores, ou seja, são criadas para executar uma tarefa e, em seguida, retornar um valor com o resultado.</p>
+    <p>Esse valor pode ser usado em outras partes do seu código, evitando um retrabalho.</p>
+
+    <p><strong>Exemplo:</strong></p>
+    <pre><code>def soma(a, b): # Função que retorna a soma de dois números.
+return a + b
+resultado = soma(5, 3)
+print(resultado) # Imprime 8</code></pre>
+
+    <h2>Procedimentos</h2>
+    <p>Os procedimentos são executados para realizar uma ação, mas não retornam um valor que possa ser usado em outras partes do seu código.</p>
+    <p>Permitem encapsular blocos de código que realizam ações específicas, sem a necessidade de retornar valores. </p>
+    
+    <pre><code>def imprimir_mensagem(texto):    # Procedimento que imprime uma mensagem no console.
+print(texto)
+imprimir_mensagem("Olá, mundo!")  # Imprime "Olá, mundo!" no console</code></pre>
+
+    <h3>Conclusão</h3>
+    <p>Em resumo, tanto funções quanto procedimentos são ferramentas essenciais para a construção de programas organizados e eficientes em Python. A escolha entre eles depende do que você precisa que o seu código realize: calcular um valor para ser usado posteriormente (função) ou executar uma ação (procedimento). </p>
+  </main>
+</body>
+</html>
+
+
+
+
+
+
+
+</body>
+
+{% endblock %}

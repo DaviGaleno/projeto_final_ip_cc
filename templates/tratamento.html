@@ -1,0 +1,133 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tratamento de Exceções</title>
+
+  <style>
+  
+    body {
+      font-family: 'Arial', 'sans-serif';
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #212529;
+      color: #ADB5BD;
+    }
+
+    header {
+      background-color: #212529;
+      color: #ADB5BD;
+      padding: 10px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #ADB5BD;
+    }
+
+    h3 {
+      color: #ADB5BD;
+    }
+
+    main {
+      padding: 1rem;
+      max-width: 900px;
+      margin: auto;
+      background-color: #212529;
+      border-radius: 10px;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    pre {
+      background-color: #131212;
+      padding: 1rem;
+      border-left: 4px solid #d63384;
+      overflow-x: auto;
+      border-radius: 5px;
+    }
+
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      color: #8c949b;
+    }
+
+    strong {
+      color: #f7f3f3;
+    }
+
+    i {
+      color: #6c757d;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Tratamento de Exceções</h1>
+    <h3>Vamos aprender como tratar exceções usando Python.</h3>
+  </header>
+
+  <main>
+    <h2>O que é?</h2>
+    <p>O tratamento de exceções em Python permite lidar com erros que ocorrem durante a execução do código, evitando que o programa termine abruptamente.</p>
+    <p>Utiliza-se a estrutura <code>try...except</code>para encapsular o código que pode gerar exceções e, em seguida, capturar e tratar as exceções que ocorrem. </p>
+    
+    <h2>Como funciona:</h2>
+
+     <ul>
+    <li>Try: Este bloco contém o código que pode gerar uma exceção.</li>
+    <li>Except: Este bloco é executado se uma exceção ocorrer dentro do bloco try. Permite especificar o tipo de exceção que se pretende capturar.</li>
+    <li>Finally (opcional): Este bloco é executado sempre, independentemente de ocorrer ou não uma exceção. É frequentemente utilizado para fechar arquivos ou liberar recursos. </li>
+  </ul>
+
+    <p><strong>Exemplo:</strong></p>
+    
+    <pre><code>try: # Código que pode gerar uma exceção
+num = 10 / 0
+except ZeroDivisionError: # Código a ser executado se uma ZeroDivisionError ocorrer
+print("Erro: Divisão por zero!")
+except Exception as e: # Código a ser executado se outra exceção ocorrer
+print(f"Ocorreu um erro: {e}")
+finally: # Código que será sempre executado
+print("Finalizando a execução.")</code></pre>
+
+    <h2>Pontos Importantes:</h2>
+         <ul>
+    <li>O bloco <code>except</code> pode ter vários blocos para tratar diferentes tipos de exceções.</li>
+    <li>Se não houver tratamento específico para uma exceção, ela será propagada para o bloco <code>except</code> mais externo ou, se não houver, o programa será interrompido.</li>
+    <li>A cláusula <code>else</code>também pode ser utilizada após a cláusula <code>except</code>, sendo executada apenas se a cláusula <code>try</code> for executada sem gerar exceções. </li>
+  </ul>
+
+    <h2>Utilização na Prática</h2>
+
+    <p>O tratamento de exceções é fundamental para tornar o código mais robusto e resiliente a erros inesperados. Permite: </p>
+         <ul>
+    <li>Lidar com situações de erro de forma elegante e controlada.</li>
+    <li>Evitar que o programa termine abruptamente.</li>
+    <li>Melhorar a experiência do utilizador, exibindo mensagens de erro apropriadas.</li>
+    <li>Facilitar o desenvolvimento e a manutenção do código, tornando-o mais fácil de compreender e depurar.</li>
+  </ul>
+
+  <p>Conclusão: o tratamento de exceções em Python é uma ferramenta essencial para construir aplicações mais seguras e confiáveis! </p>
+  </main>
+</body>
+</html>
+
+
+
+
+
+
+
+</body>
+
+
+{% endblock %}
